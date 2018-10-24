@@ -1,0 +1,97 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+
+    <title>Custom Form< Tutorial</title>
+</head>
+
+<body>
+    <center><h1>Custom Form Tutorial</h1></center>
+
+
+    <div class="container">
+        <div class="row">
+           
+            <div class="col">
+                <form method="POST" action="https://formspree.io/dojomaster@fusedojo.com">
+                    <div class="form-group">
+                        <label for="nameInput">Name</label>
+                        <input type="name" class="form-control" id="nameInput" aria-describedby="name" placeholder="Enter Name" name="Name" onchange="validation();">
+                        
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="emailInput" placeholder="Email" name="Email" onchange="validation();" >
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea class="form-control" id="message" rows="4" name="Message" onchange="validation();"></textarea>
+                    </div>
+                    
+                    <input type="submit" class="btn btn-outline-primary btn-block" id="submitBtn">
+
+                    
+                </form>
+
+            </div>
+           
+        </div>
+    </div>
+
+    <script>
+
+        function validation() {
+            var name = document.getElementById('nameInput').value;
+            var email = document.getElementById('emailInput').value;
+            var message = document.getElementById('message').value;
+            var submitBtn = document.getElementById('submitBtn');
+            
+            if(name === "" || email === "" || message === "") {
+                document.getElementById('submitBtn').disabled = true;
+                
+
+            } else {
+                submitBtn.disabled = false;
+            }
+            
+            
+        }
+    
+        validation();
+    
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
+
+
+
+
